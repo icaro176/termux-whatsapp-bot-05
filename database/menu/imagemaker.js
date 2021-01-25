@@ -4,16 +4,16 @@ const imagemaker = (prefix, botName, ownerName) => {
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerName}
-  ❏ Version: 0.0.4
-◪ *ABOUT*
+  ❏ Criador: ${ownerName}
+  ❏ Versão: 0.0.4
+◪ *SOBRE*
   │
   ├─ ❏ ${prefix}info
   ├─ ❏ ${prefix}blocklist
   ├─ ❏ ${prefix}chatlist
   ├─ ❏ ${prefix}ping
   └─ ❏ ${prefix}bugreport
-◪ *IMAGE MAKER*
+◪ *IMAGEM CRIADOR*
   │
   ├─ ❏ ${prefix}bpink
   ├─ ❏ ${prefix}snowwrite
