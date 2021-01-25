@@ -4,9 +4,9 @@ const limit = (prefix, botName, ownerName) => {
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerName}
-  ❏ Version: 0.0.4
-◪ *ABOUT*
+  ❏ Criador: ${ownerName}
+  ❏ Versão: 0.0.4
+◪ *SOBRE*
   │
   ├─ ❏ ${prefix}info
   ├─ ❏ ${prefix}blocklist
@@ -19,6 +19,6 @@ const limit = (prefix, botName, ownerName) => {
   ├─ ❏ ${prefix}bal
   └─ ❏ ${prefix}buylimit
 --------------------------------
-Note: Kamu bisa membeli limit dengan cara mengumpulkan uang terlebih dahulu. Cek uang kamu dengan cara mengetikan perintah *${prefix}bal* , harga 1 limit = 1000 uang.`
+Nota: Você pode comprar limites recolhendo dinheiro primeiro.  Verifique seu dinheiro digitando comandos *${prefix}bal* , harga 1 limit = 1000 uang.`
 }
 exports.limit = limit
