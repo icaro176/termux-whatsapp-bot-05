@@ -4,16 +4,16 @@ const education = (prefix, botName, ownerName) => {
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerName}
-  ❏ Version: 0.0.4
-◪ *ABOUT*
+  ❏ Criador: ${ownerName}
+  ❏ Versão: 0.0.4
+◪ *SOBRE*
   │
   ├─ ❏ ${prefix}info
   ├─ ❏ ${prefix}blocklist
   ├─ ❏ ${prefix}chatlist
   ├─ ❏ ${prefix}ping
   └─ ❏ ${prefix}bugreport
-◪ *EDUCATION*
+◪ *EDUCAÇÃO*
   │
   ├─ ❏ ${prefix}wiki
   ├─ ❏ ${prefix}wikien
