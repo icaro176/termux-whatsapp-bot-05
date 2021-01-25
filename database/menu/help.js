@@ -2,22 +2,23 @@ const help = (pushname, prefix, botName, ownerName, reqXp, uangku) => {
         return `
 「 *${botName}* 」
 
-◪ *USER INFO*
-  ❏ Name: ${pushname}
+◪ *USUÁRIO INFO*
+  ❏ Nome: ${pushname}
   ❏ XP: ${reqXp}
-  ❏ Money: ${uangku}
-  ❏ Registered: ✔️
+  ❏ Dinheiro: ${uangku}
+  ❏ Registrado: ✔️
 ◪ *BOT INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerName}
-  ❏ Version: 0.0.4
-◪ *ABOUT*
+  ❏ Criador: ${ownerName}
+  ❏ Versão: 0.0.4
+◪ *SOBRE*
   │
   ├─ ❏ ${prefix}info
   ├─ ❏ ${prefix}blocklist
   ├─ ❏ ${prefix}chatlist
   ├─ ❏ ${prefix}ping
   └─ ❏ ${prefix}bugreport
+NOTA: *NEM TODOS OS COMANDOS ESTÃO FUNCIONANDO, MESMO MANDANDO AGUARDAR TALVEZ NÃO FUNCIONE*
 ◪ *MENU*
   │
   ├─ ❏ ${prefix}logomakermenu
