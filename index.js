@@ -100,7 +100,7 @@ const { limit } = require('./database/menu/limit*/
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:Icaro❤️\n' // full name
-            + 'ORG:Owner Bot;\n' // the organization of the contact
+            + 'ORG:Icaro;\n' // the organization of the contact
             + 'TEL;type=CELL;type=VOICE;waid=557988645802:+55 (79) 8864-5802\n' // WhatsApp ID + phone number
             + 'END:VCARD'
 prefix = '.'
@@ -324,7 +324,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Halo @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
+				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -334,7 +334,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Sayonara @${num.split('@')[0]}👋`
+				teks = `Tchau @${num.split('@')[0]} 👋`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -376,28 +376,28 @@ async function starts() {
                         const q = args.join(' ')
 
 			mess = {
-				wait: '⌛ Sedang di Prosess ⌛',
-				success: '✔️ Berhasil ✔️',
-                                levelon: '❬ ✔ ❭ *enable leveling*',
-				leveloff: ' ❬ X ❭  *disable leveling*',
-				levelnoton: '❬ X ❭ *leveling not aktif*',
-				levelnol: '*LEVEL KAKAK MASIH* 0 °-°',
+				wait: '⌛ AGUARDE ⌛',
+				success: 'Sucesso',
+                                levelon: '❬ ✔ ❭ *Ativou Level*',
+				leveloff: ' ❬ X ❭  *Desativou Level*',
+				levelnoton: '❬ X ❭ *Level não ativado*',
+				levelnol: '*KAKAKKA LEVEL 0* °-°',
 				error: {
-					stick: '[❗] Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker ❌',
-					Iv: '❌ Link tidak valid ❌'
+					stick: '[❗] Falha, ocorreu um erro ao converter a imagem em um adesivo ❌',
+					Iv: 'Link Inválido'
 				},
 				only: {
-					group: '[❗] Perintah ini hanya bisa di gunakan dalam group! ❌',
-					ownerG: '[❗] Perintah ini hanya bisa di gunakan oleh owner group! ❌',
-					ownerB: '[❗] Perintah ini hanya bisa di gunakan oleh owner bot! ❌',
-					admin: '[❗] Perintah ini hanya bisa di gunakan oleh admin group! ❌',
-					Badmin: '[❗] Perintah ini hanya bisa di gunakan ketika bot menjadi admin! ❌',
-                                        daftarB: `──「 BELUM REGISTER 」──\nHalo kak !\nKamu belum Register nih, register dulu yuk... \n\nCommand : ${prefix}register nama|umur\nContoh : ${prefix}register Nazwa|16`,
+					group: '[❗] Este comando só pode ser usado em grupos! ❌',
+					ownerG: '[❗] Este comando só pode ser usado pelo proprietário do grupo! ❌',
+					ownerB: '[❗] Este comando só pode ser usado pelo proprietário do bot! ❌',
+					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
+					Badmin: '[❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
+                                        daftarB: `──「 REGISTRO 」──\nOlá !\nVocê ainda não se registrou, vamos registrar primeiro... \n\nComando : ${prefix}register nome|idade\nExemplo : ${prefix}register Teste|999`,
 				}
 			}
-    			const apakah = ['Ya','Tidak']
-        		const bisakah = ['Bisa','Tidak Bisa']
-		        const kapankah = ['Hari Lagi','Minggu Lagi','Bulan Lagi','Tahun Lagi']
+    			const apakah = ['sim','Não']
+        		const bisakah = ['lata','Não pode']
+		        const kapankah = ['Outro dia','Outra semana','A lua de novo','Outro ano']
 			const botNumber = client.user.jid
 			const ownerNumber = ["557988645802@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
@@ -422,8 +422,8 @@ async function starts() {
                         pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify : undefined
 
                         // Options
-                        const botName = 'BOT_NAME'
-                        const ownerName = 'OWNER_NAME'
+                        const botName = 'SETH'
+                        const ownerName = 'ICARO'
                         const BarBarKey = 'YOUR_APIKEY'
 
 			const isUrl = (url) => {
@@ -460,7 +460,7 @@ async function starts() {
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
                     addLevelingLevel(sender, 1)
-                    await reply(`*「 LEVEL UP 」*\n\n➸ *Name*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nCongrats!! 🎉🎉`)
+                    await reply(`*「 LEVEL UP 」*\n\n➸ *Nome*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nParabéns!! 🎉🎉`)
                 }
             } catch (err) {
                 console.error(err)
@@ -638,9 +638,9 @@ async function starts() {
 				if (args[1]=="detik") {var timer = args[0]+"000"
 				} else if (args[1]=="menit") {var timer = args[0]+"0000"
 				} else if (args[1]=="jam") {var timer = args[0]+"00000"
-				} else {return reply("*pilih:*\ndetik\nmenit\njam")}
+				} else {return reply("*escolher:*\nsegundo\nminuto\nhora")}
 				setTimeout( () => {
-				reply("Waktu habis")
+				reply("O tempo acabou")
 				}, timer)
 				break
                 case 'bahasa':
@@ -661,13 +661,13 @@ async function starts() {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 𝐝𝐢𝐭𝐞𝐫𝐢𝐦𝐚, 𝐦𝐞𝐧𝐮𝐫𝐮𝐧𝐤𝐚𝐧 𝐣𝐚𝐝𝐢 𝐚𝐝𝐦𝐢𝐧 𝐠𝐫𝐨𝐮𝐩 :\n`
+							teks += `Tu perdeu o adm :v :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 𝐝𝐢𝐭𝐞𝐫𝐢𝐦𝐚, 𝐦𝐞𝐧𝐮𝐫𝐮𝐧𝐤𝐚𝐧 @${mentioned[0].split('@')[0]}\n 𝐣𝐚𝐝𝐢 𝐚𝐝𝐦𝐢𝐧 𝐠𝐫𝐨𝐮𝐩 _*${groupMetadata.subject}*_`, mentioned, true)
+						mentions(`Tu @${mentioned[0].split('@')[0]}\n perdeu o adm :v _*${groupMetadata.subject}*_`, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -700,14 +700,14 @@ async function starts() {
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di promote!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Perintah di terima, menambah jabatan sebagai admin :\n'
+						teks = 'Agora você é adm :v :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`Perintah di terima, menambah jabatan sebagai admin : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`Agora você : @${mentioned[0].split('@')[0]} é adm :v`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break
@@ -715,7 +715,7 @@ async function starts() {
 				  case 'wame':
   client.updatePresence(from, Presence.composing) 
       options = {
-          text: `「 *SELF WHATSAPP* 」\n\n_Request by_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nYour link WhatsApp : *wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*Or ( / )*\n*api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
+          text: `「 *LINK DO NÚMERO* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nSeu link WhatsApp : *wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*Or ( / )*\n*api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
           contextInfo: { mentionedJid: [sender] }
     }
     client.sendMessage(from, options, text, { quoted: mek } )
@@ -728,7 +728,7 @@ async function starts() {
                                 if (!isRegister) return reply(mess.only.daftarB)
                                 if (isLimit(sender)) return reply(ind.limitend(pusname))
 				data = await fetchJson(`http://mhankbarbars.herokuapp.com/api/randomquotes`)
-				ez = `*➸ Author :* ${data.author}\n*➸ Quotes :* ${data.quotes}`
+				ez = `*➸ Autor :* ${data.author}\n*➸ citações :* ${data.quotes}`
 				reply(ez)
                                 await limitAdd(sender)
 				break
@@ -750,7 +750,7 @@ async function starts() {
               case 'owner':
                 case 'creator':
                   client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-               client.sendMessage(from, 'Nih nomor ownerku kak, save ya kak nanti di save balik',MessageType.text, { quoted: mek} )
+               client.sendMessage(from, 'Aqui está o número do meu dono',MessageType.text, { quoted: mek} )
                 break
 	case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
@@ -777,20 +777,20 @@ async function starts() {
                                                 if (isLimit(sender)) return reply(ind.limitend(pusname))
 						let { user, stats } = await tiktod.getUserProfileInfo(args[0])
 						reply(mess.wait)
-						teks = `*ID* : ${user.id}\n*Username* : ${user.uniqueId}\n*Nickname* : ${user.nickname}\n*Followers* : ${stats.followerCount}\n*Followings* : ${stats.followingCount}\n*Posts* : ${stats.videoCount}\n*Luv* : ${stats.heart}\n`
+						teks = `*ID* : ${user.id}\n*Usuário* : ${user.uniqueId}\n*Nome* : ${user.nickname}\n*Seguidores* : ${stats.followerCount}\n*Seguindo* : ${stats.followingCount}\n*Postagens* : ${stats.videoCount}\n*Curtidas* : ${stats.heart}\n`
 						buffer = await getBuffer(user.avatarLarger)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: teks})
                                                 await limitAdd(sender)
 					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('username tidak valid')
+						console.log(`Erro :`, color(e,'red'))
+						reply('usuário não encontrado :v')
 					}
 					break
 				case 'snowwrite':
 					var gh = body.slice(11)
 					var gbl7 = gh.split("|")[0];
 					var gbl8 = gh.split("|")[1];
-					if (args.length < 1) return reply(`Kirim perintah ${prefix}snowwrite teks1|teks2, contoh ${prefix}snowwrite aqulzz|galuh`)
+					if (args.length < 1) return reply(`Enviar comando ${prefix}snowwrite texto1|texto2, exemplo ${prefix}snowwrite teste|bot`)
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					reply(mess.wait)
@@ -827,7 +827,7 @@ async function starts() {
                 data = await fetchJson(`https://docs-jojo.herokuapp.com/api/infonomor?no=${body.slice(11)}`)
                 if (data.error) return reply(data.error)
                 if (data.result) return reply(data.result)
-                hasil = `╠➥ internasional : ${data.international}\n╠➥ nomor : ${data.nomor}\n╠➥ operator : ${data.op}`
+                hasil = `╠➥ internacional : ${data.international}\n╠➥ número : ${data.nomor}\n╠➥ País/Cidade : ${data.op}`
                 reply(hasil)
                 await limitAdd(sender)
                 break
@@ -836,7 +836,7 @@ async function starts() {
                    if (!isRegister) return reply(mess.only.daftarB)
                    if (isLimit(sender)) return reply(ind.limitend(pusname))
                    hasil = await getBuffer(data.gambar)
-                   client.sendMessage(from, hasil, image, {quoted: mek, caption: `Hasil Dari *${body.slice(5)}*`})
+                   client.sendMessage(from, hasil, image, {quoted: mek, caption: `Resultado de *${body.slice(5)}*`})
                    await limitAdd(sender)
                    break
                    case 'covidcountry':
@@ -845,7 +845,7 @@ async function starts() {
                    if (isLimit(sender)) return reply(ind.limitend(pusname))
                    data = await fetchJson(`https://arugaz.my.id/api/edu/corona?country=${body.slice(7)}`)
                    if (data.result) reply(data.result)
-                   hasil = `Negara : ${data.result.country}\n\nActive : ${data.result.active}\ncasesPerOneMillion : ${data.result.casesPerOneMillion}\ncritical : ${data.result.critical}\ndeathsPerOneMillion : ${data.result.deathsPerOneMillion}\nrecovered : ${data.result.recovered}\ntestPerOneMillion : ${data.result.testPerOneMillion}\ntodayCases : ${data.result.todayCases}\ntodayDeath : ${data.result.todayDeath}\ntotalCases : ${data.result.totalCases}\ntotalTest : ${data.result.totalTest}`
+                   hasil = `País : ${data.result.country}\n\nAtivos : ${data.result.active}\ncasesPerOneMillion : ${data.result.casesPerOneMillion}\ncritical : ${data.result.critical}\ndeathsPerOneMillion : ${data.result.deathsPerOneMillion}\nrecuperado : ${data.result.recovered}\ntestPerOneMillion : ${data.result.testPerOneMillion}\ntodayCases : ${data.result.todayCases}\ntodayDeath : ${data.result.todayDeath}\ntotalCases : ${data.result.totalCases}\ntotalTest : ${data.result.totalTest}`
                    reply(hasil)
                    await limitAdd(sender)
                    break
