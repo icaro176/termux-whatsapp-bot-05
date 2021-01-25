@@ -19,6 +19,6 @@ const xp = (prefix, botName, ownerName) => {
   ├─ ❏ ${prefix}level
   └─ ❏ ${prefix}mining
 --------------------------------
-Note: Kamu bisa mengumpulkan xp dan menaikan levelmu dengan cara chat dengan siapapun di dalam grup yang telah di aktifkan fitur leveling nya.`
+Nota: Você pode coletar XP e aumentar seu nível conversando com qualquer pessoa do grupo que tenha ativado o recurso de nivelamento.`
 }
 exports.xp = xp
