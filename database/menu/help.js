@@ -77,12 +77,13 @@ NOTA: *NEM TODOS OS COMANDOS ESTÃO FUNCIONANDO, MESMO MANDANDO "AGUARDE" TALVEZ
   ├─ ❏ ${prefix}wolfmetal
   ├─ ❏ ${prefix}metalictglow
   ├─ ❏ ${prefix}8bit
-  ├─ ❏ ${prefix}herrypotter
+  ├─ ❏ ${prefix}harrypotter ou herrypotter
   └─ ❏ ${prefix}quotemaker
   └─ ❏ ${prefix}toxic
-  └─ ❏ ${prefix}summer
+  └─ ❏ ${prefix}sumery
   └─ ❏ ${prefix}blood
   └─ ❏ ${prefix}avengers
+  └─ ❏ ${prefix}lava
 ◪ *STICKER MAKER*
   │
   ├─ ❏ ${prefix}sticker
