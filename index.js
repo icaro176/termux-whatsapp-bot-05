@@ -1301,15 +1301,15 @@ async function starts() {
 					reply(anu.result)
                                         await limitAdd(sender)
 					break
-			case 'igstalk':
-                      if (!isRegister) return reply(mess.only.daftarB)
-                      if (isLimit(sender)) return reply(ind.limitend(pusname))
-                      hmm = await fetchJson(`https://freerestapi.herokuapp.com/api/v1/igs?u=${body.slice(9)}`)
+                   case 'igstalk':
+                   if (!isRegistered) return reply(ind.noregis())
+                   if (isLimit(sender)) return reply(ind.limitend(pusname))
+                     hmm = await fetchJson(`https://freerestapi.herokuapp.com/api/v1/igs?u=${body.slice(9)}`)
                      buffer = await getBuffer(hmm.data.profilehd)
-                     hasil = `Nome Completo : ${hmm.data.fullname}\nSeguidores : ${hmm.data.follower}\nSeguindo : ${hmm.data.following}\nPrivado : ${hmm.data.private}\nVerificado : ${hmm.data.verified}\nbio : ${hmm.data.bio}`
+                     hasil = `Nome completo : ${hmm.data.fullname}\nseguidores : ${hmm.data.follower}\nSeguindo : ${hmm.data.following}\nPrivado : ${hmm.data.private}\nVerificado : ${hmm.data.verified}\nbio : ${hmm.data.bio}`
                     client.sendMessage(from, buffer, image, {quoted: mek, caption: hasil})
                     await limitAdd(sender)
-                    break
+					break
                     case 'ownergrup':
 				  case 'ownergroup':
                client.updatePresence(from, Presence.composing) 
@@ -1571,7 +1571,7 @@ async function starts() {
 				case 'toimg':
 				    client.updatePresence(from, Presence.composing)
                                     if (!isRegister) return reply(mess.only.daftarB)
-					if (!isQuotedSticker) return reply('❌ reply stickernya um ❌')
+					if (!isQuotedSticker) return reply('marque uma figurinha')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -1587,7 +1587,7 @@ async function starts() {
                 	case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
                         if (!isRegister) return reply(mess.only.daftarB)
-					if (!isQuotedVideo) return reply('❌ reply videonya um ❌')
+					if (!isQuotedVideo) return reply('marque um video')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -1638,7 +1638,7 @@ async function starts() {
                    client.sendMessage(from, hasil, text, {quoted: mek})
                    await limitAdd(sender)
                    break
-                              case 'game':
+                                        case 'game':
 					anu = await fetchJson(`http://rt-files.000webhostapp.com/tts.php?apikey=rasitech`, {method: 'get'})
                                         if (!isUser) return reply(mess.only.daftarB)
 					setTimeout( () => {
@@ -1675,7 +1675,7 @@ async function starts() {
 						reply('digite 1 para ativar, 0 para desativar o recurso')
 					}
                                         break
-                                case 'fakta':
+                                        case 'fakta':
 					fakta = body.slice(1)
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
@@ -1696,7 +1696,7 @@ async function starts() {
 					client.sendMessage(from, buffer, image, {quoted: mek})
                                         await limitAdd(sender)
 					break
-				case 'firetext':
+				        case 'firetext':
 					if (args.length < 1) return reply(mess.blank)
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
@@ -1708,7 +1708,7 @@ async function starts() {
 					client.sendMessage(from, buff, image, {quoted: mek})
                                         await limitAdd(sender)
 					break
-                                case 'gantengcek':
+                                        case 'gantengcek':
 					if (isRegister) return reply(mess.only.daftarB)
 					ganteng = body.slice(1)
 					const gan =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
@@ -1765,7 +1765,7 @@ async function starts() {
 						reply('❌ *ERRO* ❌')
 					}
 					break
-				case 'logowolf':
+				        case 'logowolf':
 					var gh = body.slice(11)
 					var teks1 = gh.split("|")[0];
 					var teks2 = gh.split("|")[1];
@@ -1795,7 +1795,7 @@ async function starts() {
 						reply('digite 1 para ativar, 0 para desativar o recurso')
 					}
 					break	
-				case 'quotes2':
+				        case 'quotes2':
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					gatauda = body.slice(8)					
@@ -1813,7 +1813,7 @@ async function starts() {
 					client.sendMessage(from, buffer, image,{quoted: mek})
                                         await limitAdd(sender)
 					break
-				case 'randomanime':
+				        case 'randomanime':
 					gatauda = body.slice(13)
 					reply(mess.wait)
                                         if (!isRegister) return reply(mess.only.daftarB)
@@ -1823,7 +1823,7 @@ async function starts() {
 					client.sendMessage(from, buffer, image, {quoted: mek})
                                         await limitAdd(sender)
 					break						
-                                case 'husbu':
+                                        case 'husbu':
                                         gatauda = body.slice(13)
 					reply(mess.wait)
                                         if (!isRegister) return reply(mess.only.daftarB)
@@ -1833,7 +1833,7 @@ async function starts() {
 					client.sendMessage(from, buffer, image, {quoted: mek})
                                         await limitAdd(sender)
 					break
-				case 'husbu2':
+				        case 'husbu2':
 					gatauda = body.slice(13)
 					reply(mess.wait)
                                         if (!isRegister) return reply(mess.only.daftarB)
@@ -1843,7 +1843,7 @@ async function starts() {
 					client.sendMessage(from, buffer, image, {quoted: mek})
                                         await limitAdd(sender)
 					break
-				case 'logowolf2':
+				        case 'logowolf2':
 					var gh = body.slice(11)
 					var teks1 = gh.split("|")[0];
 					var teks2 = gh.split("|")[1];
@@ -1957,7 +1957,7 @@ async function starts() {
                                         const latensi = speed() - timestamp
                                         client.updatePresence(from, Presence.composing) 
 				        uptime = process.uptime()
-                                        client.sendMessage(from, `Velocidade: *${latensi.toFixed(4)} _Segundos_*\nDispositivo: *Black Shark 3*\nRAM: *8/128*\nData: *Smartfren*\nJaringan: *4G*\nStatus: *No carregador*`, text, { quoted: mek})
+                                        client.sendMessage(from, `Velocidade: *${latensi.toFixed(4)} _Segundos_*\nDispositivo: *SLAKAKA*\nRAM: *91228917474828/128*\nData: *Smartfren*\nJaringan: *827383G*\nStatus: *No carregador*`, text, { quoted: mek})
                                         break
                                 case 'neonlogo':
                                         var gh = body.slice(9)
@@ -1996,13 +1996,13 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         await limitAdd(sender)
                                         break
-                                /*case 'jsholat':
+                                        case 'jsholat':
                                         tels = body.slice(8)
                                         if (args.length < 1) return reply('Onde fica a área mano?')
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/jadwalshalat?q=${tels}&apikey=BotWeA`, {method: 'get'})
                                         reply(anu.result)
                                         break*/
-                                case 'jokerlogo':
+                                        case 'jokerlogo':
                                         var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
                                         if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}jokerlogo Seth')
@@ -2014,13 +2014,13 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         await limitAdd(sender)
                                         break
-                                /*case 'jadwaltvnow':  
+                                case 'jadwaltvnow':  
 				if (!isRegister) return reply(mess.only.daftarB)
                                reply(mess.wait)
 		               anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/jadwaltvnow?&apiKey=administrator`, {method: 'get'})
 			       reply(anu.result.jadwalTV)
 					break*/
-                                case 'afk':
+                                        case 'afk':
                                         tels = body.slice(4)
                                         if (args.length < 1) return reply('irmão por causa de quê?')
                                         if (!isRegister) return reply(mess.only.daftarB)
@@ -2055,7 +2055,7 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak gambarnya...'})
                                         await limitAdd(sender)
                                         break
-                                case 'coffee':
+                                        case 'coffee':
                                         var gh = body.slice(7)
                                         var teks1 = gh.split("|")[0];
                                         if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}coffee Seth')
@@ -2067,7 +2067,7 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya kak...'})
                                         await limitAdd(sender)
                                         break
-                                case 'lovepaper':
+                                        case 'lovepaper':
                                         var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
                                         if (args.length < 1) return reply('teksnya mana um\nContoh: ${prefix}lovepaper Seth')
@@ -2303,6 +2303,58 @@ async function starts() {
                                         reply(anu.result)
                                         await limitAdd(sender)
                                         break
+                                        case 'toxic':
+					if (!isRegistered) return reply(ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+					if (args.length < 1) return reply(ind.wrongf())
+					aruga = body.slice(7)
+					reply(ind.wait())
+					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/toxictext?text=${aruga}`)
+					client.sendMessage(from, aruga, image, {caption: 'Aqui mano', quoted: mek})
+					await limitAdd(sender)
+					break
+                                        case 'sumery':
+					if (!isRegistered) return reply(ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+					if (args.length < 1) return reply(ind.wrongf())
+					aruga = body.slice(8)
+					reply(ind.wait())
+					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/sandsummery?text=${aruga}`)
+					client.sendMessage(from, aruga, image, {caption: 'Aqui mano', quoted: mek})
+					await limitAdd(sender)
+					break
+                                        case 'blood':
+					if (!isRegistered) return reply(ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+					if (args.length < 1) return reply(ind.wrongf())
+					aruga = body.slice(7)
+					reply(ind.wait())
+					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/bloodtext?text=${aruga}`)
+					client.sendMessage(from, aruga, image, {caption: 'Aqui mano', quoted: mek})
+					await limitAdd(sender)
+					break
+                                        case 'lava':
+					if (!isRegistered) return reply(ind.noregis())
+					if (isLimit(sender)) return reply(ind.limitend(pusname))
+					if (args.length < 1) return reply(ind.wrongf())
+					aruga = body.slice(6)
+					reply(ind.wait())
+					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/lavatext?text=${aruga}`)
+					client.sendMessage(from, aruga, image, {caption: 'Aqui mano', quoted: mek})
+					await limitAdd(sender)
+					break
+                 case 'avengers':
+                 if (!isRegistered) return reply(ind.noregis())
+                 if (isLimit(sender)) return reply(ind.limitend(pusname))
+					if (args.length < 1) return reply(ind.wrongf())
+					if (!q.includes('|')) return  reply(ind.wrongf())
+                   const aruga1 = q.substring(0, q.indexOf('|') - 0)
+                    const aruga2 = q.substring(q.lastIndexOf('|') + 1)
+					reply(ind.wait())
+					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/avengers?text1=${aruga1}&text2=${aruga2}`)
+					client.sendMessage(from, aruga, image, {caption: 'Aqui mano', quoted: mek})
+					await limitAdd(sender)
+					break 
                                 case 'faktaunik':
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
@@ -2319,12 +2371,12 @@ async function starts() {
                                         reply(anu.result)
                                         await limitAdd(sender)
                                         break
-                                /*case 'translate':
+                                case 'translate':
                                         var gl = body.slice(10)
                                         var lg = gh.split("|")[0];
                                         var teksnya = gh.split("|")[1];
-                                        if (args.length < 1) return reply(`onde está o código do idioma\nExemplo:\n${prefix}translate|pt|what?`)
-                                        if (args.length < 2) return reply(`onde está o texto hum\nExemplo:\n${prefix}translate|pt|what?`)
+                                        if (args.length < 1) return reply(`onde está o código do idioma\nExemplo:\n${prefix}translate |pt|what?`)
+                                        if (args.length < 2) return reply(`onde está o texto hum\nExemplo:\n${prefix}translate |pt|what?`)
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://arugaz.my.id/api/edu/translate?lang=${lg}&text=${teksnya}`, {method: 'get'})
