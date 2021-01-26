@@ -1996,7 +1996,7 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         await limitAdd(sender)
                                         break
-                                        case 'jsholat':
+                                        /*case 'jsholat':
                                         tels = body.slice(8)
                                         if (args.length < 1) return reply('Onde fica a área mano?')
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/jadwalshalat?q=${tels}&apikey=BotWeA`, {method: 'get'})
@@ -2014,7 +2014,7 @@ async function starts() {
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         await limitAdd(sender)
                                         break
-                                case 'jadwaltvnow':  
+                                /*case 'jadwaltvnow':  
 				if (!isRegister) return reply(mess.only.daftarB)
                                reply(mess.wait)
 		               anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/jadwaltvnow?&apiKey=administrator`, {method: 'get'})
@@ -2371,7 +2371,7 @@ async function starts() {
                                         reply(anu.result)
                                         await limitAdd(sender)
                                         break
-                                case 'translate':
+                                /*case 'translate':
                                         var gl = body.slice(10)
                                         var lg = gh.split("|")[0];
                                         var teksnya = gh.split("|")[1];
